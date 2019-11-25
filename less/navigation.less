@@ -1,27 +1,21 @@
 // Navigation code hereheader {
 .navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .flex(column, center);
   align-items: center;
   width: 100%;
   padding: 2% 0;
 
   h1 {
-    display: flex;
+    .flex(row, center);
     font-size: 4rem;
-    justify-content: center;
     padding-bottom: 1%;
   }
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 34%;
+    .flex(row, space-around);
+    width: 36%;
 
-    @media (max-width: 500px) {
-      width: 100%;
-      padding-top: 1%;
+    @media @phone {
+      width: 80%;
     }
 
     a {
